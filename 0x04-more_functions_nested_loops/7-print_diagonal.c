@@ -15,7 +15,7 @@ void print_diagonal(int n)
 	{
 		for (j = 0; j < i; j++)
 			putchar(' ');
-		putchar('\');
+		putchar('\\');
 		putchar('\n');
 	}}
 	if (n <= 0)
