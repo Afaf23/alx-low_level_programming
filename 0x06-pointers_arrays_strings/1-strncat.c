@@ -7,12 +7,21 @@
  * Return: the pointer to dest.
  */
 char *_strncat(char *dest, char *src, int n)
-		{size_t dest_len = strlen(dest);
-		size_t i;
+	{
+	int d = 0, s = 0;
 
-		for (i = 0 ; i < n && src[i] != '\0' ; i++)
-		dest[dest_len + i] = src[i];
-		dest[dest_len + i] = '\0';
-	
-		return dest;
-		}
+	while (*(dest + d) != '\0')
+	{
+		d++;
+	}
+
+	while (s < n)
+	{
+		*(dest + d) = *(src + s);
+		if (*(src + s) == '\0')
+			break;
+		d++;
+		s++;
+	}
+	return (dest);
+	}
