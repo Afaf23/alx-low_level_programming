@@ -1,4 +1,20 @@
 #include "main.h"
+
+/**
+ * square - calculates i**i to check with n.
+ * @n: base number.
+ * @i: iterator number.
+ * Return: i.
+ */
+int square(int n, int i)
+{
+	if (i * i == n)
+		return (i);
+	if (i * i <= n)
+		return (square(n, i + 1));
+	else
+		return (-1);
+}
 /**
  * _sqrt_recursion - calculates the natural square root of n.
  * @n: base number.
@@ -7,15 +23,10 @@
  */
 int _sqrt_recursion(int n)
 {
-	int i;
-
-	if (n == 0)
-		return (0);
 	if (n < 0)
 		return (-1);
-	if (n == 1)
-		return (1);
-	if (i * i == n)
-		return (i);
+	if (n == 0 || n == 1)
+		return (n);
+	return (square(n, 2));
 }
 
