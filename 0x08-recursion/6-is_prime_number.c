@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * is_prime - finds out if a number is prime recursively
  *
@@ -16,7 +15,6 @@ int is_prime(int x, int y)
 		return (0);
 	return (is_prime(x, y + 1));
 }
-}
 /**
  * is_prime_number - returns if a number is prime
  *
@@ -28,5 +26,5 @@ int is_prime_number(int n)
 {
 	if (n < 2)
 		return (0);
-	return (prime_finder(n, 2));
+	return (is_prime(n, 2));
 }
