@@ -2,3 +2,5 @@
 #define _sum_h
 
 #define SUM(x, y) ((x) + (y))
+
+#endif /* _sum_h */
