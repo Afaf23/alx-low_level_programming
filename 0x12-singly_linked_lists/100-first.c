@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "lists.h"
 /**
  * first - funcion that prints a specific string before the main
  * Return: no return
